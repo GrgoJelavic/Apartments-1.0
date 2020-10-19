@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jelavic apartments</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette|Open+Sans:400,800&display=swap">
     <link rel="stylesheet" href="./style.css">
     <script defer src="./main.js"></script>
 </head>
@@ -46,17 +47,66 @@
 </header>
 
 <main>
-    <div class="explore">
+    <section class="explore">
         <div class="container">
             <div class="explore-heading">
                 <h1 class="title">Explore</h1>
                 <h3 class="subtitle">cozy apartments in Split</h3>
             </div>
-            <a href="#" class="button button-gradient">Discover now
+            <a href="#" class="button button-gradient-right">Discover now
                 <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
             </a>
         </div>
-    </div>
+    </section>
+
+    <section class="booking">
+        <div class="container">
+            <form action="" class="form">
+                <div class="input-group">
+                    <label for="check-in" class="input-label">Check-in</label>
+                    <input type="date" class="input" id="check-in">
+                </div>
+                <div class="input-group">
+                    <label for="check-out" class="input-label">Check-out</label>
+                    <input type="date" class="input" id="check-out">
+                </div>
+                <div class="input-group">
+                    <label for="guests" class="input-label">Adults</label>
+                    <select class="options" id="guests">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="children" class="input-label">Children</label>
+                    <select class="options" id="children">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="apartments" class="input-label">Apartments</label>
+                    <select class="options" id="apartments">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <button type="submit" class="button button-form button-gradient-left">Search
+                    <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                </button>
+            </form>
+        </div>
+    </section>
 </main>
 
 </html>
