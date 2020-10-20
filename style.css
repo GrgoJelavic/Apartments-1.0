@@ -1,7 +1,176 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Jelavic apartments</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette|Open+Sans:400,800&display=swap"><link rel="stylesheet" href="./style.css"><script defer src="./main.js"></script></head><body><header class="header"><div class="container"><nav class="nav"><a href="index.html" class="logo"><img src="./assets/logo.png" alt="logo"></a><div class="hamburger-menu"><i class="fas fa-bars"></i><i class="fas fa-times"></i></div><ul class="nav-list"><li class="nav-item"><a href="index.html" class="nav-link">Home</a></li><li class="nav-item"><a href="#" class="nav-link">About</a></li><li class="nav-item"><a href="#" class="nav-link">Offers</a></li><li class="nav-item"><a href="#" class="nav-link">News</a></li><li class="nav-item"><a href="#" class="nav-link">Contact</a></li></ul></nav></div></header><main><section class="explore"><div class="container"><div class="explore-heading"><h1 class="title">Explore</h1><h3 class="subtitle">cozy apartments in Split</h3></div><a href="#" class="button button-gradient">Discover now <span class="dots"><i class="fas fa-ellipsis-h"></i></span></a></div></section><section class="booking"><div class="container"><form action="" class="form"><div class="input-group"><label for="check-in" class="input-label">Check-in</label><input type="date" class="input" id="check-in"></div><div class="input-group"><label for="check-out" class="input-label">Check-out</label><input type="date" class="input" id="check-out"></div><div class="input-group"><label for="guests" class="input-label">Adults</label><select class="options" id="guests"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div><div class="input-group"><label for="children" class="input-label">Children</label><select class="options" id="children"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></div><div class="input-group"><label for="apartments" class="input-label">Apartments</label><select class="options" id="apartments"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></div><button type="submit" class="button button-form button-search">Search <span class="dots"><i class="fas fa-ellipsis-h"></i></span></button></form></div></section><section class="apartments"><div class="container"><h5 class="section-head"><span class="heading">Explore</span><span class="sub-heading">our beautiful apartments</span></h5></div><div class="grid"><div class="grid-item featured-apartment"><img src="./assets/apartments/kings1.jpg" class="apartment-image" alt=""><h5 class="apartment-name">King's view aparment</h5>
- <span class="apartment-price">From €50/Night</span><div class="apartment-rating"><i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="fas fa-star rating"></i></div><a href="" class="button button-gradient">Reserve now <span class="dots"><i class="fas fa-ellipsis-h"></i></span></a></div></div><div class="grid"><div class="grid-item featured-apartment"><img src="./assets/apartments/bellaMare1.jpg" class="apartment-image" alt=""><h5 class="apartment-name">Bella Mare aparment</h5><span class="apartment-price">From €40/Night</span><div class="apartment-rating"><i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="fas fa-star-half rating"></i></div><a href="" class="button button-gradient">Reserve now <span class="dots"><i class="fas fa-ellipsis-h"></i></span></a></div></div><div class="grid"><div class="grid-item featured-apartment"><img src="./assets/apartments/pomalo1.jpg" class="apartment-image" alt=""><h5 class="apartment-name">Pomalo aparment</h5><span class="apartment-price">From €50/Night</span><div class="apartment-rating"><i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="fas fa-star rating"></i></div><a href="" class="button button-gradient">Reserve now <span class="dots"><i class="fas fa-ellipsis-h"></i></span></a></div></div><div class="grid"><div class="grid-item featured-apartment"><img src="./assets/apartments/superMario1.jpg" class="apartment-image" alt=""><h5 class="apartment-name">Super Mario aparment</h5><span class="apartment-price">From €40/Night</span><div class="apartment-rating"><i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="fas fa-star-half rating"></i></div><a href="" class="button button-gradient">Reserve now <span class="dots"><i class="fas fa-ellipsis-h"></i></span></a></div></div></section></main></body></html>ndex: 0;
-
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+:root {
+    --dark-color: #2d2c2c;
+    --blue-solid: #0a104f;
+    --blue-transparent: rgba(0, 0, 125, 0.7);
+    --blue-transparent-alt: #00007d4d;
+    --blue-light: #0d3fbd;
+    --orange-solid: #ff9008;
+    --gradient-color: linear-gradient(to right, var(--orange-solid), var(--blue-light));
+    --gradient-color-alt: linear-gradient(to right, var(--blue-light), var(--orange-solid));
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    color: #2d2c2c;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 120rem;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+.button {
+    color: #fff;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0.5rem 3.5rem;
+    border: none;
+    border-radius: 10rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.button-gradient {
+    background-image: var(--gradient-color);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.button-gradient:hover {
+    background-image: var(--gradient-color-alt);
+    transform: scale(1.1);
+}
+
+.dots {
+    font-size: 2rem;
+    margin-left: 1.5rem;
+    opacity: 0.7;
+}
+
+
+/* header */
+
+header {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--blue-transparent);
+    z-index: 999;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    max-width: 55%;
+}
+
+.hamburger-menu {
+    font-size: 2.6rem;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 1500;
+}
+
+.hamburger-menu .fa-times {
+    display: none
+}
+
+.nav-list {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--blue-solid);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1400;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.3s;
+}
+
+.menu-open .nav-list {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.menu-open .hamburger-menu .fa-times {
+    display: block;
+}
+
+.menu-open .hamburger-menu .fa-bars {
+    display: none;
+}
+
+.nav-item:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.nav-link {
+    display: block;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1rem;
+}
+
+
+/* explore section */
+
+.explore {
+    width: 100%;
+    height: 100vh;
+    background: url("./assets/split-2.jpg") center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+
 .explore::before {
     content: '';
     position: absolute;
@@ -12,30 +181,37 @@
     background-color: var(--blue-transparent-alt);
     z-index: -1;
 }
+
 .explore-heading {
     color: #fff;
     line-height: 1.3;
     text-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.5);
     margin-bottom: 2rem;
 }
+
 .title {
     font-size: 4.5rem;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
+
 .subtitle {
     font-size: 2.5rem;
     font-weight: 200;
     font-family: 'Courgette', cursive;
 }
 
+
 /* booking section */
+
 .booking {
     background-image: var(--gradient-color);
 }
+
 .input-group {
     margin-bottom: 1.1rem;
 }
+
 .input-label {
     display: block;
     color: #fff;
@@ -44,6 +220,7 @@
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
+
 .input,
 .options {
     outline: none;
@@ -57,40 +234,104 @@
     font-family: "Open Sans", sans-serif;
     resize: none;
 }
+
 .form {
     align-items: center;
     text-align: center;
 }
+
 .button-form {
     margin-top: 2rem;
 }
+
+.button-search {
+    background-color: #fff;
+    color: var(--blue-light);
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.5rem 8rem;
+}
+
+.button-search:hover {
+    background-color: var(--blue-light);
+    color: #fff;
+    transform: scale(1.1);
+}
+
  ::placeholder {
     color: inherit;
 }
 
+
 /* apartments */
+
 .section-head {
     text-align: center;
     margin-bottom: 5rem;
 }
+
 .heading {
     font-size: 4rem;
     text-transform: uppercase;
     display: block;
 }
+
 .sub-heading {
     font-size: 1.7rem;
     font-family: 'Courgette', cursive;
     font-weight: 300;
     color: #a5a5a5;
 }
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(3orem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-gap: 2.5rem;
 }
+
 .grid-item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.apartment-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.featured-apartment {
+    height: 35rem;
+    color: #fff;
+    margin: 1rem;
+    position: relative;
+    z-index: 0;
+}
+
+.featured-apartment::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue-transparent-alt);
+    z-index: -1;
+}
+
+.apartment-name {
+    font-size: 2.4rem;
+}
+
+.apartment-price {
+    font-size: 2rem;
+}
+
+.apartment-rating {
+    margin: 1rem 0 2.5rem;
 }
