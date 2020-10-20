@@ -282,13 +282,7 @@ header {
     color: #a5a5a5;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 2.5rem;
-}
-
-.grid-item {
+.apartment-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -325,13 +319,50 @@ header {
 }
 
 .apartment-name {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
 }
 
 .apartment-price {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .apartment-rating {
     margin: 1rem 0 2.5rem;
+}
+
+.rating {
+    color: gold;
+}
+
+
+/* special offer */
+
+.offer {
+    background: linear-gradient(to right, rgba(250, 157, 44, .8), rgba(80, 100, 251, 0.8)), url("./assets/apartments/kings2.jpg") bottom center no-repeat;
+    background-size: cover;
+}
+
+.offer-content {
+    background-color: #fff;
+    text-align: center;
+    padding: 5rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.discount {
+    background-color: var(--orange-solid);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    text-transform: uppercase;
+    outline: 2px solid var(--orange-solid);
+    outline-offset: .5rem;
+    font-weight: bold;
+}
+
+.offer-text {
+    color: #a5a5a5;
+    margin-bottom: 2.5rem;
 }
