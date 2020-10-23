@@ -9,7 +9,7 @@
 :root {
     --dark-color: #2d2c2c;
     --blue-solid: #0a104f;
-    --blue-transparent: rgba(0, 0, 125, 0.7);
+    --blue-transparent: rgba(0, 0, 125, 0.9);
     --blue-transparent-alt: #00007d4d;
     --blue-light: #0d3fbd;
     --orange-solid: #ff9008;
@@ -78,7 +78,7 @@ section {
 
 /* header */
 
-header {
+.header {
     width: 100%;
     height: 6rem;
     display: flex;
@@ -88,6 +88,10 @@ header {
     left: 0;
     background-color: var(--blue-transparent);
     z-index: 999;
+}
+
+.header.active {
+    background-color: var(--blue-solid);
 }
 
 .nav {
@@ -369,7 +373,7 @@ header {
     font-weight: bold;
 }
 
-.offer-text {
+.text {
     color: #a5a5a5;
     margin-bottom: 2.5rem;
 }
@@ -421,4 +425,49 @@ header {
 
 .contact-form .input:focus+.bar::after {
     transform: scaleX(1);
+}
+
+
+/* footer  */
+
+.footer {
+    padding: 5rem 0;
+    background-color: var(--blue-solid);
+    color: #fff;
+}
+
+.footer-content-inner {
+    margin-bottom: 5rem;
+}
+
+.footer .text {
+    color: inherit;
+}
+
+.footer-heading {
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-link {
+    width: 4rem;
+    height: 4rem;
+    /* border: 2px solid var(--orange-solid); */
+    border-radius: 50%;
+    display: flex;
+    margin-right: 1rem;
+    transition: var(--blue-transparent-alt) 0.5s;
+}
+
+.social-link:hover {
+    background-color: var(--orange-solid);
+    color: var(--dark-color);
+}
+
+.social-link i {
+    margin: auto;
 }
