@@ -6,6 +6,6 @@ hamburgerMenu.addEventListener('click', function() {
 })
 
 window.addEventListener('scroll', function() {
-    let windowPosition = window.scrollY > 0;
+    let windowPosition = window.scrollY > 100;
     header.classList.toggle('active', windowPosition)
 })
